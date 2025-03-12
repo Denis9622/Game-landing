@@ -1,0 +1,149 @@
+.why-section {
+  text-align: center;
+  padding-top: 68px;
+  margin-left: 16px;
+  margin-right: 16px;
+
+  @include media(desktop) {
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+.why-title {
+  color: $_golden;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 52px;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 64px;
+  }
+}
+
+.why-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-image-container {
+  order: 1;
+}
+
+.why-text-blocks {
+  order: 2;
+}
+
+/* Desktop layout */
+@include media(desktop) {
+  .why-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .section-image-container {
+    order: 2;
+  }
+
+  .why-text-blocks {
+    order: 1;
+  }
+}
+
+.why-text-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
+  @include media(desktop) {
+    gap: 20px;
+    width: 654px;
+    height: 636px;
+  }
+}
+
+.why-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 288px;
+  height: 206px;
+  background-image: url(../img/why-you-love/frame-mobile.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include media(desktop) {
+    width: 100%;
+    height: auto;
+    background-image: url(../img/why-you-love/frame-desk.png);
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.section-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-picture {
+  width: 241px;
+  height: auto;
+  border: 2px solid #f49a38;
+
+  @include media(desktop) {
+    border: 4px solid #f49a38;
+    width: 461px;
+    height: auto;
+  }
+}
+
+.why-text {
+  color: $_white;
+  text-align: center;
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  padding: 18px 48px;
+
+  @include media(desktop) {
+    width: 558px;
+    font-size: 24px;
+  }
+}
+
+.why-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 288px;
+  height: 206px;
+  background-image: url(../img/why-you-love/frame-mobile.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include media(desktop) {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-image: url(../img/why-you-love/frame-desk.png);
+  }
+}

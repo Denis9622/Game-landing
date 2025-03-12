@@ -1,0 +1,75 @@
+@import './header.scss';
+@import './terms-and-policy.scss';
+@import './hero.scss';
+@import './about.scss';
+@import './faq.scss';
+@import './reviews.scss';
+@import './benefits.scss';
+@import './rules.scss';
+@import './why-you-love.scss';
+@import './download.scss';
+@import './footer.scss';
+
+
+
+
+
+:root {
+  font-family: Lato, Roboto Slab, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  scroll-behavior: smooth;
+
+  color: $_golden;
+  background-color: $_dark_blue;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 320px;
+  margin: 0 auto;
+
+  @include media(desktop) {
+    width: 1200px;
+  }
+}
+
+main {
+  padding-top: 68px;
+}
+
+.title {
+  color: $_golden;
+  text-align: center;
+  font-family: 'Roboto Slab';
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.44em;
+
+  @include media(desktop) {
+    font-size: 48px;
+  }
+}
+
+html::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgba(10, 22, 51, 0.7);
+}
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(8, 18, 46, 0.7);
+  border-radius: 10px;
+  background-color: rgba(10, 22, 51, 0.7);
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(8, 18, 46, 0.7);
+  background-color: darken(rgba(10, 22, 51, 0.7), 7%);
+}
