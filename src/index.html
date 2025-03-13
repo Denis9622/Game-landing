@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/fav-16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Legendary Hero Bingo</title>
+    <title>El Camino del Guerrero</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,13 +25,71 @@
       <load ="partials/reviews.html" />
       <load ="partials/why-you-love.html" />
       <load ="partials/download.html" />
-
     </main>
 
     <load ="partials/footer.html" />
 
+    <div id="cookie-modal" class="cookie-modal">
+      <div class="cookie-content">
+        <p>Usamos cookies para mejorar tu experiencia en *El Camino del Guerrero*. ¿Aceptas nuestras cookies?</p>
+        <button id="accept-cookies" class="cookie-btn">Aceptar</button>
+        <a href="./policy.html" class="cookie-link">Más información</a>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cookieModal = document.getElementById("cookie-modal");
+        const acceptCookies = document.getElementById("accept-cookies");
+
+        if (!localStorage.getItem("cookiesAccepted")) {
+          cookieModal.style.display = "block";
+        }
+
+        acceptCookies.addEventListener("click", function () {
+          localStorage.setItem("cookiesAccepted", "true");
+          cookieModal.style.display = "none";
+        });
+      });
+    </script>
+
+    <style>
+      .cookie-modal {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1000;
+      }
+
+      .cookie-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .cookie-btn {
+        background: #f39c12;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+        color: white;
+        border-radius: 3px;
+      }
+
+      .cookie-link {
+        color: #f39c12;
+        text-decoration: underline;
+      }
+    </style>
+
     <script type="module" src="./main.js"></script>
-    <script type="module" src="./js/gallery.js"></script>
     <script type="module" src="./js/load.js"></script>
     <script type="module" src="./js/faq.js"></script>
   </body>
